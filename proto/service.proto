@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package proto;
 
-// option go_package = ".;service_proto";
+option go_package = ".;proto";
 
 message Request {
   string name = 3;
@@ -17,4 +17,5 @@ message Response {
 service AddService {
   rpc Add (Request) returns (Response);
   rpc Multiply (Request) returns (Response);
+  rpc Plus (Request) returns (Response);
 }
